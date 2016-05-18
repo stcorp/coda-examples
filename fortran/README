@@ -1,0 +1,6 @@
+Each of the fortran examples in the subdirectories have to compiled together
+with the coda_fortran.c file and the CODA C library into an executable.
+
+Check the example in your CODA installation directory
+(<prefix>/share/coda/fortran) for the coda_fortran.c source file and example
+Makefile on how to do this.
