@@ -1,0 +1,8 @@
+CODA C examples
+---------------
+
+If you installed CODA in /usr/local then running 'make' in each
+of the subdirectories will build the examples.
+If you used another installation prefix for CODA then use: 
+   make coda_prefix=<prefix>
+

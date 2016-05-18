@@ -1,0 +1,9 @@
+CODA C examples for MIPAS data
+------------------------------
+
+* mipl2geo.c
+
+This example walks the 'SCAN LEOCATION' ADS, and shows the
+geolocation information contained in the 'loc_mid' field for
+each of the DSRs
+

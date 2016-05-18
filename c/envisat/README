@@ -1,0 +1,13 @@
+CODA C examples for ENVISAT data
+--------------------------------
+
+* absorbit.c
+
+This small example shows how to extract the ABS_ORBIT field
+from the MPH that is present in any PDS-file, using coda.
+
+* show_headers.c
+
+This program demonstrates reading the MPH, SPH, and DSDs of a
+product, and displaying them in a human-readable format.
+

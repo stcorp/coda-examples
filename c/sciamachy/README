@@ -1,0 +1,17 @@
+CODA C examples for SCIAMACHY data
+----------------------------------
+
+* scil1b.c
+
+This demo shows how to read the (complicated) SCIAMACHY level-1b
+product, by walking the states, and for each state, the attached
+DSRs (which contain a number of clusters).
+  Readout values (in BU/s) are calculated for each DSR, by
+subtracting dark current and dividing by integration time.
+
+* scil1b-gnuplot.c
+
+This program builds on the previous example and generates 'plot'
+commands that can be read by the 'gnuplot' program. Run this
+program on a SCIAMACHY Level-1b file and pipe the output to
+gnuplot, to get a nice view of SCIAMACHY data over an orbit.
