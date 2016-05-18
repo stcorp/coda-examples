@@ -1,0 +1,24 @@
+IDL> sciamachy_global_topography, "SCI_SF2_AX-file"
+
+    Shows world height-map contained in the SCI_SF2_AX file.
+
+IDL> sciamachy_mpi_climatology, "SCI_PR2_AX-file"
+
+    Shows a succession of temperature profiles contained in the SCI_PR2_AX file.
+
+IDL> sciamachy_sun_reference, "SCI_NL__1P-file"
+
+    Shows the sun reference spectra as contained in the Level-1b product file.
+
+IDL> sciamachy_level_1b, "SCI_NL__1P-file"
+
+    Shows the complicated level-1b product, pixel readouts.
+
+IDL> sciamachy_level_2, "SCI_NL__2P-directory"
+
+    Shows all nadir ground pixels in the product files, coloured by the
+    vertical colomn density of the DOAS_0_O3 retrieval value.
+
+    NOTE: this procedure takes a directory argument, instead of a file, and
+           will process all SCI_NL__2P files contained therein.
+

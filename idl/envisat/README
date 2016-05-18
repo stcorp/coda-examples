@@ -1,0 +1,5 @@
+IDL> show_headers, "product-file"
+
+    Shows MPH, SPH, and DSD records as obtained from the headers of the
+    specified ENVISAT product file.
+

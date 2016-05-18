@@ -1,0 +1,12 @@
+IDL> mipas_level_1b, "MIP_NL__1P-file"
+
+    Shows readouts of band A & B of a given MIPAS level-2 file.
+
+IDL> mipas_level_2, "MIP_NL__2P-directory"
+
+    Shows readouts of O3 densities from multiple MIPAS level-2 files, on a
+    latitude/height scale.
+
+    NOTE: this procedure takes a directory argument, instead of a file, and
+          will process all MIP_NL__2P files contained therein.
+

@@ -1,0 +1,8 @@
+IDL> gomos_level_1b, "GOM_TRA_1P-file"
+
+    Shows GOMOS level-1b spectra of a given spectrum.
+
+IDL> gomos_level_2, "GOM_NL__2P-file"
+
+    Shows ozone/height profile of a given GOMOS level-2 file.
+
