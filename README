@@ -1,0 +1,8 @@
+CODA examples
+-------------
+
+This repository contains a random selection of examples on how to use the CODA software.
+The examples are grouped per interface (C, Fortran, Python, IDL, MATLAB, ...) and then per type of data.
+
+If you have any good examples yourself that you would like to have included, please provide them and we will add them.
+
