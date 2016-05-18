@@ -1,0 +1,11 @@
+* absorbit.py
+
+This small example shows how to use CODA to extract the 'abs_orbit'
+field (which indicates the absolute orbit number) from the MPH that
+is present in any ENVISAT file.
+
+* show_headers.py
+
+This program demonstrates reading the MPH, SPH, and DSDs of an
+ENVISAT product, and displaying them in a human-readable format.
+

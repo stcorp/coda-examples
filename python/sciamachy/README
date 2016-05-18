@@ -1,0 +1,9 @@
+* scil1b.py
+
+This demo shows how to read the (complicated) SCIAMACHY Level 1b
+product, by walking the states, and for each state, the attached
+DSRs (which contain a number of clusters).
+Readout values (in BU/s) are calculated for each DSR, by subtracting
+dark current, dividing by the integration time and applying the bad
+pixel mask.
+
