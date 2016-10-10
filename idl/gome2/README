@@ -1,0 +1,49 @@
+IDL> gome2l1b, "GOME_xxx_1B-file"
+
+     Show how to read data from a GOME-2 L1b file
+
+
+
+The GOME2 spectral data in the GOME2 L1b product is stored inside MDRs. 
+There are separate MDRs for Earthshine, Calibration, Sun, and Moon
+measurements. In addition there are also 'Dummy Records' (DMDR) that can be
+present when there is lost data in the product.
+
+Each MDR roughly contains a single scan. However, an MDR does not exactly
+correspond 1-to-1 with a GOME-2 scan. This is an important fact to be aware
+of. The real situation is as follows:
+
+Within a single scan (a scan takes 6 seconds) there are 16 Instrument Source
+Packets (covering 375ms each) coming from the satellite. Each ISP contains at
+most two readouts (there are two if the integration time for a band is 187.5ms
+(or 93.75ms)). The problem is that the two readouts of the first ISP of a scan
+contain the last measurement of the previous scan and the first measurement of
+the new scan. The second ISP contains data for measurements #2 and #3, the
+third for #4 and #5, etc. The last measurement of a scan will again be found
+in the first ISP of the next scan. Instead of shifting the data and grouping
+all data of a single scan together in a single MDR the Level 1a and Level 1b
+processors just place the MDR boundary at the start of the first ISP of a scan
+and terminate the MDR at the end of ISP 16. This means that in Level 1b (but
+also 1a) products the first measurement in an MDR will always be the last
+measurement of the previous scan.
+
+Nearly all meta-data for a readout (time, geolocation, viewing/solar angles,
+etc.) in an MDR are filled taking into account this same shift. This means
+that for retrieving the geolocation of the first readout of an MDR from the
+GEO_EARTH_ACTUAL record, one will in fact get the geolocation information of
+the last backscan pixel of the previous scan. However, the integration time
+meta-data for the first readout in an MDR is not shifted this way (the
+GEO_EARTH information is also not shifted, by the way, and just contains the
+32 geolocation pixels for the scan). As long as the integration time does not
+change from one scan to another this won't impact anything, but the L1
+products will contain invalid metadata for the first MDR readout if there is a
+change of integration time between two consecutive scans. In that case the
+calculated geolocation, angles, etc. of the first readout are values based on
+the integration time of the _new_ scan instead of the _old_ scan (e.g. the
+ground pixel will thus either be too large or too small). The (relative) good
+news to this is that, if a change in integration time occurs, the last pixel
+readout of the final scan with the 'old' integration time will never be valid
+and will have undefined values in the product (this is because the instrument
+prematurely terminates the final readout if a scan configuration change
+occurs). This means that the readout that has the 'invalid' meta-data will
+never be a valid measurement anyway.
