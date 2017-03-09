@@ -1,0 +1,5 @@
+* mipl2geo.py
+
+This example shows the LOS tangent point locations for each of the
+scans in a MIPAS Level 2 product.
+
