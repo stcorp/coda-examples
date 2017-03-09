@@ -1,5 +1,4 @@
-* mipl2geo.py
+* aeolus_l1b.py
 
-This example shows the LOS tangent point locations for each of the
-scans in a MIPAS Level 2 product.
+Shows how to read the observation and measurement wind velocity profiles for Mie and Rayleigh.
 
