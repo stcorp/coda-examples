@@ -5,3 +5,7 @@ Shows how to read the observation and measurement wind velocity profiles for Mie
 * aeolus_l2a.py
 
 Shows how to read the L2A optical properties.
+
+* aeolus_l2b.py
+
+Shows how to read the L2B HLOS wind velocities as points or profiles.
