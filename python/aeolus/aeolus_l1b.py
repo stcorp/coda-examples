@@ -3,7 +3,6 @@ from numpy import hstack, vstack
 
 # change this to the full path of your Aeolus L1B DBL file
 filename = "/path/to/AE_OPER_ALD_U_N_1B_20151002T001857059_005787000_046339_0001.DBL"
-filename = "/Volumes/Optimus/Aeolus/ADDF 2017-02/AE_OPER_ALD_U_N_1B_20151002T001857059_005787000_046339_0001/AE_OPER_ALD_U_N_1B_20151002T001857059_005787000_046339_0001.DBL"
 
 product = coda.open(filename)
 
