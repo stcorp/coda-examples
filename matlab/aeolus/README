@@ -1,0 +1,11 @@
+* aeolus_l1b.m
+
+Shows how to read the observation and measurement wind velocity profiles for Mie and Rayleigh.
+
+* aeolus_l2a.m
+
+Shows how to read the L2A optical properties.
+
+* aeolus_l2b.m
+
+Shows how to read the L2B HLOS wind velocities as points or profiles.
