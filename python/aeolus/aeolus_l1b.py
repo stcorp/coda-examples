@@ -1,3 +1,9 @@
+import os
+
+# Change this to the location of your AEOLUS codadef file
+os.putenv('CODA_DEFINITION', '/usr/local/share/coda/definitions')
+# You can also remove this line and set the CODA_DEFINITION environment variable globally on your system
+
 import coda
 from numpy import hstack, vstack
 
