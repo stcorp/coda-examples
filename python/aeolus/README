@@ -9,3 +9,8 @@ Shows how to read the L2A optical properties.
 * aeolus_l2b.py
 
 Shows how to read the L2B HLOS wind velocities as points or profiles.
+
+* aux_met_12.py
+
+Shows how to efficiently read data from the AUX_MET_12 auxiliary products.
+
